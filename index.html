@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/ead4092f880f75ff0883ced1856b2c37?family=SF+Pro+Rounded+Regular" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
+    <title>Loginpage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* background-color: blueviolet; */
+            padding: 8px;
+            height: 97.5vh;
+        }
+
+        section.left {
+            width: 50%;
+            height: 100%;
+            padding: 0 9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        section.left form {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            display: flex;
+            /* background-color: brown; */
+            flex-direction: column;
+        }
+
+        .intro h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 0;
+            color: #0C1421;
+            font-family: "SF Pro Rounded Regular";
+        }
+
+        .intro p {
+            font-size: 20px;
+            line-height: 32px;
+            margin-top: 28px;
+            color: #313957;
+            font-family: 'SF Pro Display', sans-serif;
+        }
+
+        label {
+            color: #0C1421;
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .uname {
+            width: 100%;
+            height: 48px;
+            color: #8897AD;
+            background-color: #F3F7FB;
+            border: 1px solid #D4D7E3;
+            border-radius: 12px;
+            padding-top: auto;
+            padding-left: 16px;
+            font-size: 16px;
+        }
+
+        .upass {
+            width: 100%;
+            height: 48px;
+            color: #8897AD;
+            background-color: #F3F7FB;
+            border: 1px solid #D4D7E3;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            padding-top: auto;
+            padding-left: 16px;
+            font-size: 16px;
+        }
+
+        .forgetpassword {
+            text-align: right;
+            text-decoration: none;
+            color: #1E4AE9;
+        }
+
+        .sign-btn {
+            width: 100%;
+            height: 52px;
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            margin-top: 24px;
+            background-color: #162D3A;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .sign-btn:hover {
+            cursor: pointer;
+            background-color: #4790BA;
+        }
+
+        .singup {
+            margin-top: 48px;
+            text-align: center;
+        }
+
+        .singup a {
+            text-decoration: none;
+            color: #1E4AE9;
+        }
+
+        section.right {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            order: 1;
+            /* background-color: aqua; */
+        }
+
+        section.right img {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            object-fit: cover;
+        }
+
+        .footerLogin {
+            padding-bottom: 50px;
+            display: flex;
+            align-items: flex-end;
+            /* background-color: blue; */
+        }
+
+        .footerLogin span {
+            width: 100%;
+            text-align: center;
+            color: #959CB6;
+        }
+
+        @media(max-width:1321px) {
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 9rem;
+            }
+        }
+        @media(max-width:1026px){
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 8rem;
+            }
+        }
+        @media(max-width:981px){
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 7rem;
+            }
+        }
+
+        @media(max-width:934px) {
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 6rem;
+            }
+        }
+        @media(max-width:890px) {
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 5rem;
+            }
+        }
+        @media(max-width:846px) {
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 4rem;
+            }
+        }
+        @media(max-width:799px) {
+            section.left {
+                width: 80%;
+                height: 100%;
+                padding: 0 3rem;
+            }
+        }
+
+        @media(max-width:762px) {
+            .container {
+                flex-direction: column-reverse;
+            }
+
+            section.left {
+                padding: 0;
+                width: 100%;
+            }
+
+            section.left form {
+                padding-top: 27px;
+                justify-content: start;
+            }
+
+            .intro h1 {
+                font-size: 24px;
+            }
+
+            .intro p {
+                font-size: 15px;
+                margin-top: 16px;
+                line-height: 24px;
+            }
+
+            label {
+                font-size: 14px;
+                margin: 8px 0;
+            }
+            .uname{
+                height: 42px;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+
+            .upass {
+                height: 42px;
+                font-size: 14px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+            }
+
+            .forgetpassword {
+                font-size: 14px;
+            }
+
+            .sign-btn {
+                height: 44px;
+                border-radius: 12px;
+                margin-top: 16px;
+            }
+
+            .singup {
+                font-size: 14px;
+                margin-top: 24px;
+            }
+
+            section.right {
+                width: 100%;
+            }
+
+            section.right{
+                height: 20vh;
+            }
+            section.right img {
+                border-radius: 20px;
+            }
+
+            .footerLogin {
+                padding-bottom: 0;
+            }
+            .footerLogin span {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <section class="right">
+                <img src="https://s3-alpha-sig.figma.com/img/992d/fb28/30a38887b0559dfb619dc9eba940a887?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WFshsyPnr~3BoANgFA2H84XVSZDYy7PwAQAF1z29Q2ikG50htUpuovpo-XOJZpJtBViNi1Z5w~55MtuUyBoS52Utdm~wH43aTtKwKdEgELUjK6OqbVxHeqxiIW16wdKSCCcKTKo6QjoB8bYrsKM4EMmSUCfyo5A5YOuodlNc5Gdz0Kxm~Xv5NlrQIIoHpA1Qvgd7QAV35rJS253UWl125l60pw2eHBe0mfokZ8zx--pRP3fMYZZIfbWfUGSENziu2Eo1UFwzT0tHMpjyfoapqiZ3fLzdyTqZ3MRgAj4Ot8h4rhsnWX-LqoOsK-fSGUjHoU1aHLzq3-mFEHI9KDj1mQ__"
+                    alt="">
+            </section>
+            <section class="left">
+                <form action="">
+                    <div class="intro">
+                        <h1>Welcome Back 👋</h1>
+                        <p>Today is a new day. It's your day. You shape it. Sign in to start managing your projects</p>
+                    </div>
+                    <label for="uname">Email</label>
+                    <input class="uname" id="uname" type="email" value="Example@email.com">
+                    <label for="upass">Password</label>
+                    <input class="upass" id="upass" type="password">
+                    <a class="forgetpassword" href="">Forgot Password?</a>
+                    <input class="sign-btn" type="submit" value="Sign in">
+                    <p class="singup">Don't you have an account? <a href="">Sign up</a></p>
+                </form>
+                <div class="footerLogin">
+                    <span>&copy; 2024 ALL RIGHTS RESERVED</span>
+                </div>
+            </section>
+        </div>
+    </body>
+</body>
+
+</html>
